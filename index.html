@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Proposal - The Wateridge Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Open Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #114955;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #F4FDFF 0%, #FFFFFF 50%, #FCEFEA 100%);
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(17, 73, 85, 0.08);
+        }
+        
+        .brand-name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 28px;
+            color: #114955;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: #114955;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .proposal-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 24px;
+            color: #114955;
+            margin-bottom: 10px;
+        }
+        
+        .client-name {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            color: #114955;
+            font-size: 18px;
+        }
+        
+        h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #114955;
+            margin: 35px 0 20px 0;
+            border-bottom: 2px solid #E0F1F4;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #114955;
+            margin: 25px 0 12px 0;
+        }
+        
+        .partnership-model {
+            background-color: #E0F1F4;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #114955;
+        }
+        
+        .partnership-model h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .approach-text {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #114955;
+        }
+        
+        .phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .phase {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #F5F5F5;
+            box-shadow: 0 2px 10px rgba(17, 73, 85, 0.05);
+        }
+        
+        .phase.phase-4 {
+            background: linear-gradient(135deg, #F4FDFF 0%, #E0F1F4 100%);
+            border: 1px solid #F5F5F5;
+        }
+        
+        .phase h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: #114955;
+            font-size: 14px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .phase .timeline {
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #114955;
+            opacity: 0.7;
+        }
+        
+        .phase ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .phase li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 13px;
+        }
+        
+        .phase li::before {
+            content: "•";
+            color: #F0C4B8;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .deliverable {
+            background-color: #FCEFEA;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .phase-4 .deliverable {
+            background-color: rgba(252, 239, 234, 0.8);
+            border: 1px solid #F0C4B8;
+        }
+        
+        .investment-table {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 25px 0;
+            box-shadow: 0 2px 15px rgba(17, 73, 85, 0.08);
+        }
+        
+        .investment-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .investment-table th {
+            background-color: #114955;
+            color: #FFFFFF;
+            padding: 15px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: left;
+        }
+        
+        .investment-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #F5F5F5;
+            font-size: 13px;
+        }
+        
+        .investment-table tr:nth-child(even) {
+            background-color: #F4FDFF;
+        }
+        
+        .success-indicators {
+            background-color: #FCEFEA;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .success-indicators ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .success-indicators li {
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+        }
+        
+        .success-indicators li::before {
+            content: "✓";
+            color: #114955;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .cta-section {
+            background-color: #114955;
+            color: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            background-color: #F0C4B8;
+            color: #114955;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(240, 196, 184, 0.4);
+        }
+        
+        .strategic-note {
+            font-style: italic;
+            color: #114955;
+            font-size: 13px;
+            text-align: center;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+        
+        .roi-section {
+            background: linear-gradient(135deg, #E0F1F4 0%, #F4FDFF 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .roi-highlight {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 18px;
+            color: #114955;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .result-item {
+            background-color: #FFFFFF;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(17, 73, 85, 0.05);
+        }
+        
+        .result-number {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #114955;
+            display: block;
+        }
+        
+        .result-label {
+            font-size: 11px;
+            color: #114955;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .phases {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand-name">Tiffany Whalen | TK & Co. Marketing</div>
+            <div class="tagline">Clarity + Conversions</div>
+            <div class="proposal-title">Marketing Proposal</div>
+            <div class="client-name">The Wateridge Group</div>
+        </div>
+
+        <div class="partnership-model">
+            <h3>Revised Approach</h3>
+            <p>We'll focus on building a streamlined seller lead system that converts existing leads while positioning for scalable growth. Like building a car, we'll start with the engine (systems and automation), then add fuel (content / campaigns) once the foundation is solid.</p>
+            <br>
+            <p>This prioritizes building immediate functionality over extensive upfront analysis, creating a working system that captures and converts leads while we optimize and track channel ROI in Phase 4.</p>
+        </div>
+
+        <h2>Strategic Framework</h2>
+        
+        <div class="phases">
+            <div class="phase">
+                <h4>Phase 1 – Discover & Diagnose</h4>
+                <div class="timeline">Weeks 1–2</div>
+                <ul>
+                    <li>Audit seller lead funnel</li>
+                    <li>Establish baseline data + KPI's</li>
+                    <li>Map seller journey</li>
+                    <li>Analyze Gaps</li>
+                </ul>
+                <div class="deliverable">
+                    <strong>Deliverable:</strong> High Level Audit Report
+                </div>
+            </div>
+            
+            <div class="phase">
+                <h4>Phase 2 – Strategy & Build</h4>
+                <div class="timeline">Weeks 3–6</div>
+                <ul>
+                    <li>Strategic roadmap</li>
+                    <li>Funnel architecture</li>
+                    <li>Brand messaging framework</li>
+                    <li>Build nurture flows, automations</li>
+                </ul>
+                <div class="deliverable">
+                    <strong>Deliverable:</strong> Operational Seller Funnel + Brand Messaging Framework
+                </div>
+            </div>
+            
+            <div class="phase">
+                <h4>Phase 3 – Launch & Test</h4>
+                <div class="timeline">Weeks 7–8</div>
+                <ul>
+                    <li>Soft + full database launches</li>
+                    <li>A/B testing strategy</li>
+                    <li>Optimization playbook</li>
+                </ul>
+                <div class="deliverable">
+                    <strong>Deliverable:</strong> Go-Live + Optimization Playbook
+                </div>
+            </div>
+            
+            <div class="phase phase-4">
+                <h4>Phase 4 – Partnership & Growth</h4>
+                <div class="timeline">Monthly</div>
+                <ul>
+                    <li>Protect marketing investment</li>
+                    <li>Monthly performance reviews</li>
+                    <li>Continuous testing & optimization</li>
+                    <li>ROI channel effectiveness tracking (Month 2+)</li>
+                </ul>
+                <div class="deliverable">
+                    <strong>Deliverable:</strong> Performance + Optimization Reviews
+                </div>
+            </div>
+        </div>
+
+        <h2>Investment</h2>
+        
+        <div class="investment-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timeline</strong></td>
+                        <td>8 weeks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hours</strong></td>
+                        <td>159 hrs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investment</strong></td>
+                        <td>$18,900</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus</strong></td>
+                        <td>Seller funnel foundation + automation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ongoing</strong></td>
+                        <td>8–12 hrs/month | $950 - $1,428 /month for 6 months</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="strategic-note">
+            Payment schedule: Milestone-based with 7-day terms
+        </div>
+
+        <h2>ROI Projection</h2>
+        
+        <div class="roi-section">
+            <div class="roi-highlight">Built for Long-Term Growth 📈</div>
+            <p>Average listing price: <strong>~$577,521</strong></p>
+            <p>Potential commission per client: <strong>$17,325+</strong> (3% rate)</p>
+            <p style="margin-top: 15px; font-weight: 500;">Goal: Secure multiple additional clients + future-proof through improved, scalable systems</p>
+        </div>
+
+        <h2>Proven Results</h2>
+        <p style="margin-bottom: 15px; font-weight: 500;">BiggerPockets Property Management Finder Success:</p>
+        
+        <div class="results-grid">
+            <div class="result-item">
+                <span class="result-number">+87%</span>
+                <div class="result-label">Lead Generation</div>
+            </div>
+            <div class="result-item">
+                <span class="result-number">+89%</span>
+                <div class="result-label">Conversion Rate</div>
+            </div>
+            <div class="result-item">
+                <span class="result-number">+15%</span>
+                <div class="result-label">Average Order Value</div>
+            </div>
+            <div class="result-item">
+                <span class="result-number">$174K</span>
+                <div class="result-label">Additional Annual Revenue</div>
+            </div>
+        </div>
+
+        <h2>Success Indicators</h2>
+        
+        <div class="success-indicators">
+            <ul>
+                <li>Established baseline metrics and benchmarks</li>
+                <li>Improved lead engagement and conversion</li>
+                <li>Growth in local homeowner database</li>
+                <li>Leveraged and measured ROI tracking</li>
+                <li>Time-savings via scalable automation</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <div class="cta-title">Ready to Build a Scalable Revenue-Generating Machine?</div>
+            <p>This focused approach transforms your existing seller database into a systematic growth engine while building the foundation for long-term scalable success.</p>
+            <p>Contact Tiffany to get started.</p>
+            <a href="mailto:tiffany.j.whalen@gmail.com" class="cta-button">Get Started</a>
+        </div>
+    </div>
+</body>
+</html>
